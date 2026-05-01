@@ -1,0 +1,43 @@
+{
+  "name": "ascii-art-generator",
+  "displayName": "ASCII Art Generator",
+  "version": "1.0.0",
+  "description": "Turns highlighted text into ASCII art",
+  "engines": {
+    "vscode": "^1.118.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "ascii-art-generator.generateAsciiArt",
+        "title": "Generate ASCII Art from Selection"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run package",
+    "compile": "webpack",
+    "watch": "webpack --watch",
+    "package": "webpack --mode production --devtool hidden-source-map"
+  },
+  "keywords": [],
+  "author": "Obay",
+  "license": "ISC",
+  "dependencies": {
+    "figlet": "^1.11.0"
+  },
+  "devDependencies": {
+    "@types/figlet": "^1.7.0",
+    "@types/node": "^25.6.0",
+    "@types/vscode": "^1.118.0",
+    "ts-loader": "^9.5.7",
+    "typescript": "^6.0.3",
+    "webpack": "^5.106.2",
+    "webpack-cli": "^7.0.2"
+  }
+}
